@@ -1,0 +1,31 @@
+---
+import { ClientRouter } from "astro:transitions";
+import "../styles/global.css";
+---
+
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <title>MI CURRICULUM</title>
+    </head>
+
+    <body
+        class="bg-linear-to-br from-pink-300 via-fuchsia-400 to-violet-500 min-h-screen text-white"
+    >
+        <ClientRouter />
+
+        <nav
+            class="p-4 bg-white/30 backdrop-blur flex justify-center gap-6 rounded-b-xl"
+        >
+            <a href="/">INICIO</a>
+            <a href="/datos">DATOS PERSONALES</a>
+            <a href="/experiencia">EXPERIENCIA</a>
+        </nav>
+
+        <main class="p-6">
+            <slot />
+        </main>
+
+        <footer class="p-4 text-center text-sm">2026</footer>
+    </body>
+</html>

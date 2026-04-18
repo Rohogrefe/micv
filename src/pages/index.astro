@@ -1,0 +1,18 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Boton from "../components/Boton.svelte";
+import Hero from "../components/Hero.astro";
+---
+
+<Layout>
+	<Hero nombre="Rocío Hogrefe" />
+
+	<a
+		href="/experiencia"
+		class="mt-6 inline-block bg-white text-fuchsia-600 px-6 py-3 rounded-xl font-bold shadow hover:scale-105 transition"
+	>
+		descargar CV
+	</a>
+
+	<Boton client:load />
+</Layout>
